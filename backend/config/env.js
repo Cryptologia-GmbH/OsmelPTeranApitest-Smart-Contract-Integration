@@ -21,6 +21,17 @@ const env = {
   DB_ACCESS_KEY:"eC1zZWNyZXQtaGVhZGVy",
   DB_ACCESS_VALUE:"c2VjcmV0",
   RESEND_API_KEY: process.env.RESEND_API_KEY,
+  
+  // Web3 / Blockchain Configuration for Holesky Testnet
+  // NOTE: These are PUBLIC values (contract addresses on public blockchain and public RPC endpoints)
+  // They are safe to use as defaults since they are already publicly visible on-chain
+  // Unlike private keys or API secrets, these pose no security risk
+  // We still allow environment variable override for flexibility (e.g., switching networks)
+  HOLESKY_RPC_URL: process.env.HOLESKY_RPC_URL || "https://ethereum-holesky-rpc.publicnode.com",
+  STAKING_DASHBOARD_ADDRESS: process.env.STAKING_DASHBOARD_ADDRESS || "0xd33e9676463597AfFF5bB829796836631F4e2f1f",
+  DETH_ADDRESS: process.env.DETH_ADDRESS || "0x520d7dAB4A5bCE6ceA323470dbffCea14b78253a",
+  SETH_ADDRESS: process.env.SETH_ADDRESS || "0x16b0cD88e546a90DbE380A63EbfcB487A9A05D8e",
+  GOVERNANCE_ADDRESS: process.env.GOVERNANCE_ADDRESS || "0xD396FE92075716598FAC875D12E708622339FA3e",
 };
 
 module.exports = { env };
